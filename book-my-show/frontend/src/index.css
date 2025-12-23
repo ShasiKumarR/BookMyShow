@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f6f6;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* TOP PANEL */
+.top-panel {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.top-panel input {
+  padding: 8px;
+  width: 180px;
+}
+
+.top-panel button {
+  padding: 8px 14px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* SEAT STRUCTURE */
+.seat-structure {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 720px;
+}
+
+.seat-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+}
+
+/* SEAT CARD */
+.seat {
+  border-radius: 6px;
+  padding: 10px 6px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid #c8e6c9;
+}
+
+.seat:hover {
+  transform: scale(1.05);
+}
+
+/* TEXT */
+.seat-id {
+  font-weight: bold;
+}
+
+.seat-status {
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* STATUS COLORS */
+.seat.available {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.seat.booked {
+  background: #fdecea;
+  color: #c62828;
+  cursor: not-allowed;
+}
+
+.seat.held {
+  background: #fff8e1;
+  color: #f9a825;
+  cursor: not-allowed;
+}
+
+/* SELECTED */
+.seat.selected {
+  border: 2px solid #1565c0;
+  background: #bbdefb;
+}
